@@ -48,3 +48,5 @@ class User
     @posts[index]
   end
 end
+
+
