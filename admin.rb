@@ -1,6 +1,7 @@
 ##
 # Include the User Class so we can inherit from it.
 require "./user"
+require "./admin" 
 
 ##
 # Create a Admin Class based on the User Class.
@@ -20,4 +21,13 @@ class Admin < User
   def delete_post_by_index(index)
     @posts.delete_at(index)
   end
+
+  # This method as delete_post_by_index, But it givs the admin
+  # abality to delete any post even User's Post
+
+  # The method returns the delete blog post.
+  def delete_any(user_post, index)
+    user_post.posts.delete_at(index) # <BlogPost:0x00007feac490beb8>
+  end
+  
 end
