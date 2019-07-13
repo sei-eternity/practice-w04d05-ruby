@@ -1,18 +1,24 @@
 ##
-# Creat a User Class that will contain user profile information.
+# Create a User Class that will contain user profile information.
 # Along with all of the Blog Posts owned by the individual user.
 
 class User
   ##
   # Setup our Getter and Setter methods for (Class Properties)
   attr_accessor :username, :first_name, :last_name,
-                :email, :posts
+                :email, :posts, :feed
 
   def initialize(username, first, last, email)
     @username, @first_name, @last_name, @email = username, first, last, email
-
+    @feed = []
     # Initialize the @posts Array (Class Property) as an empty Array.
     @posts = []
+  end
+  #the method enables users to enter a feedback of the blog
+  def feedback(content)
+    @feed.push(content)
+    p content
+    p 'Thanks for your feedback'
   end
 
   ##
@@ -22,6 +28,15 @@ class User
   def profile
     puts "<h1>#{@first_name} #{@last_name}: #{@email}</h1>"
   end
+  # Changes the username
+  def change_username(username)
+    @username = username
+  end
+
+  def change_email(email)
+    @email = email
+  end
+
 
   ##
   # Prints the Users Full Name
