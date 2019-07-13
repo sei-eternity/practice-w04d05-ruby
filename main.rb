@@ -64,3 +64,15 @@ admin_user_waleed.delete_post_by_index(2)
 
 # The number of blog posts for `admin_user_waleed` after deleting a dummy post.
 puts "admin_user_waleed: #{admin_user_waleed.posts.length}" # => 3
+p admin_user_waleed.profile
+p admin_user_waleed.username
+admin_user_waleed.change_username('waleed2')
+p admin_user_waleed.username
+p admin_user_waleed.email
+admin_user_waleed.change_email('waleed2@ga.co')
+p admin_user_waleed.email
+user_ahlam.feedback('The website needs some features')
+user_ahlam.feedback('The website.nknknkn')
+
+p user_ahlam.feed.length
+admin_user_waleed.show_feeds
