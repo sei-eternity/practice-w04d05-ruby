@@ -64,3 +64,11 @@ admin_user_waleed.delete_post_by_index(2)
 
 # The number of blog posts for `admin_user_waleed` after deleting a dummy post.
 puts "admin_user_waleed: #{admin_user_waleed.posts.length}" # => 3
+
+
+# Make the admin able to delete any post even Ahlam posts
+p "admin deleted user's post #{admin_user_waleed.delete_any(user_ahlam, 1)}"
+puts "user_ahlam: #{user_ahlam.posts.length}" #=> 
+
+
+
